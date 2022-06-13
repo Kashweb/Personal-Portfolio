@@ -16,28 +16,27 @@ font-family: 'Ubuntu', sans-serif; */
     background-color: #007bff;
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
-    padding: 25px 0px;
+    padding: 15px 0px;
 }
 
 .nav-width{
-
-}
-
-.menu{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0 80px;
+    padding: 0 100px;
     margin: auto;
+
 }
 
-.menu li{
+.menu li, .navicons div{
     list-style-type: none;
+    display: inline-block;
 }
 
-.menu li a{
+.menu li a, .navicons a{
     color: #fff;
     font-size: 16px;
     font-weight: 500;
     margin: 0px 10px 0px 10px;
-}
+} 
+
