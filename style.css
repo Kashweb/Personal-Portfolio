@@ -19,11 +19,11 @@ font-family: 'Ubuntu', sans-serif; */
     padding: 15px 0px;
 }
 
-.nav-width{
+.max-width{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 120px;
     margin: auto;
 
 }
@@ -40,3 +40,41 @@ font-family: 'Ubuntu', sans-serif; */
     margin: 0px 10px 0px 10px;
 } 
 
+/* home section */
+
+.home{
+    display: flex;
+    background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") no-repeat center;
+    height: 100vh;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto;
+}
+
+.homecontent{
+    align-items: ;
+}
+
+.homecontent .text1{
+    font-size: 30px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+.homecontent .text2{
+    font-size: 70px;
+    padding-bottom: 15px;
+    margin-left: -4px;
+    font-weight: 600;
+}
+
+.homecontent .text3{
+    font-size: 30px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
