@@ -16,12 +16,13 @@ font-family: 'Ubuntu', sans-serif; */
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
     padding: 25px 0px;
+    transition: all 0.3s ease;
 }
 
-.navbar .scrolledNavbar{
-    background-color: #007bff;
-    padding: 25px 0px;
-
+.scrolledNavbar{
+    background: #007bff;
+    padding: 15px 0px;
+    transition: all 0.3s ease;
 }
 
 .max-width{
@@ -47,6 +48,10 @@ font-family: 'Ubuntu', sans-serif; */
 
 .menu li a:hover, .navicons a:hover{
     color: #007bff;
+}
+
+.scrolledNavbar .menu li a:hover, .scrolledNavbar .navicons a:hover{
+    color: #fff;
 }
 
 /* home section */
@@ -92,3 +97,38 @@ font-family: 'Ubuntu', sans-serif; */
     font-weight: 600;
 }
 
+.menu-bars{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Navbar */
+
+@media screen and (max-width: 900px) {
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .navbar .menu{
+        position: fixed;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .menu li{
+        display: block;
+        margin: 20px;
+    }
+
+    .menu li a{
+        display: inline block;
+    }
+}
