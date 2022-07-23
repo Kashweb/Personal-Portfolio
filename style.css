@@ -25,9 +25,20 @@ font-family: 'Ubuntu', sans-serif; */
     transition: all 0.3s ease;
 }
 
-.max-width{
+/* media screen at 500 width */ /* media screen at 500 width */ /* media screen at 500 width */
+
+@media screen and (max-width: 500px){
+    .scrolledNavbar{
+        padding: 10px 0px;
+    }
+}
+
+.navbar .max-width{
     display: flex;
     justify-content: space-between;
+}
+
+.max-width{
     align-items: center;
     padding: 0 130px;
     margin: auto;
@@ -54,7 +65,7 @@ font-family: 'Ubuntu', sans-serif; */
     color: #fff;
 }
 
-/* home section */
+/* home section */  /* home section */ /* home section */ /* home section */ /* home section */
 
 .home{
     display: flex;
@@ -68,27 +79,27 @@ font-family: 'Ubuntu', sans-serif; */
 }
 
 .home .max-width{
-    margin: auto 0 auto 40px;
+    margin: auto 0 auto 20px;
 }
 
 
 
 .homecontent .text1{
-    font-size: 30px;
-    padding-bottom: 5px;
+    font-size: 40px;
+    padding-bottom: 7px;
     font-weight: 500; 
 }
 
 .homecontent .text2{
-    font-size: 70px;
-    padding-bottom: 15px;
+    font-size: 90px;
+    padding-bottom: 18px;
     margin-left: -4px;
     font-weight: 600;
 }
 
 .homecontent .text3{
-    font-size: 30px;
-    padding-bottom: 5px;
+    font-size: 40px;
+    padding-bottom: 7px;
     font-weight: 500;
 }
 
@@ -104,23 +115,108 @@ font-family: 'Ubuntu', sans-serif; */
     display: none;
 }
 
+
+/* about section */ /* about section */ /* about section */ /* about section */
+
+section{
+    padding: 30px 0px;
+}
+
+.heading{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    padding: 20px 0px;
+    font-family: 'Superior title', 'Times New Roman', sans-serif;
+}
+
+.about{
+    font-family: 'Poppins', sans-serif;
+}
+
+.aboutcontent{
+    display: flex;
+    justify-content: space-between; 
+}
+
+/* .personal-statement{
+    max-width: 70%;
+} */
+
+.photo{
+    max-height: 250px;
+    max-width: 250px;
+}
+
+
+
+/* media screen at 1300 width */ /* media screen at 1300 width */ /* media screen at 1300 width */
+
+@media screen and (max-width: 1300px){
+    .homecontent .text1{
+        font-size: 30px;
+        padding-bottom: 7px;
+        font-weight: 500; 
+    }
+    
+    .homecontent .text2{
+        font-size: 70px;
+        padding-bottom: 18px;
+        margin-left: -4px;
+        font-weight: 600;
+    }
+    
+    .homecontent .text3{
+        font-size: 30px;
+        padding-bottom: 7px;
+        font-weight: 500;
+    }
+}
+
+/* media screen at 1080 width */ /* media screen at 1080 width */ /* media screen at 1080 width */
+
+@media screen and (max-width: 1080px) {
+    .max-width{
+        padding: 0 55px;
+    }
+}
+
+/* media screen at 900 width */ /* media screen at 900 width */ /* media screen at 900 width */
 /* Responsive Navbar */
+
 
 @media screen and (max-width: 900px) {
     .max-width{
-        padding: 0 50px;
+        padding: 0 25px;
     }
 
-    .navbar .menu{
+    .menu-bars{
+        display: block;
+        z-index: 100;
+    }
+
+    .menu-bars i.active:before{
+        content: "\f00d";
+    }
+
+
+    .menu{
         position: fixed;
         background-color: black;
         height: 100vh;
         width: 100%;
-        top: 0px;
-        right: 0px;
+        top: 0%;
+        left: -100%;
         text-align: center;
-        font-size: 40px;
+        font-size: 50px;
         font-weight: bold;
+        padding: 50px 0px;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .active{
+        left: 0%;
     }
 
     .menu li{
@@ -131,4 +227,30 @@ font-family: 'Ubuntu', sans-serif; */
     .menu li a{
         display: inline block;
     }
+    
 }
+
+
+/* media screen at 600 width */ /* media screen at 600 width */ /* media screen at 600 width */
+
+@media screen and (max-width: 600px){
+    .homecontent .text1{
+        font-size: 20px;
+        padding-bottom: 6px;
+        font-weight: 500; 
+    }
+    
+    .homecontent .text2{
+        font-size: 60px;
+        padding-bottom: 15px;
+        margin-left: -4px;
+        font-weight: 600;
+    }
+    
+    .homecontent .text3{
+        font-size: 20px;
+        padding-bottom: 6px;
+        font-weight: 500;
+    }
+}
+
