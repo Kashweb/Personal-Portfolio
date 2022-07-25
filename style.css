@@ -11,6 +11,10 @@ font-family: 'Ubuntu', sans-serif; */
     box-sizing: border-box;
 }
 
+*::selection{
+    background: rgb(210, 246, 6);
+}
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -67,7 +71,7 @@ font-family: 'Ubuntu', sans-serif; */
 
 #ResumeNav{
     padding: 5px 8px;
-    border: 1.5   px solid #fff;
+    border: 1.5px solid #fff;
     border-radius: 10%;
 }
 
@@ -136,13 +140,14 @@ section{
 
 .aboutcontent{
     margin: 0px 50px;
-    border: 1px solid black
+    align-items: center;
 }
 
 .statementandphoto{
+    margin: auto;
+    max-width: 1060px;
     display: flex;
-    justify-content: space-between; 
-    border: 1px solid black;      
+    align-items: center;    
 }
 
 .pesonal-statement{
