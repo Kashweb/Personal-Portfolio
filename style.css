@@ -151,7 +151,7 @@ section{
     align-items: center;
 }
 
-.pesonal-statement{
+.personal-statement{
     min-width: 65%;
     font-size: 17px;
     font-weight: 400;
@@ -180,13 +180,62 @@ section{
     box-shadow: 20px 20px 28px 0 rgb(0 0 0 / 22%);
 }
 
-.gridinfo{
-    margin: 60px 30px 30px 30px;
-    display: flex;
+.gridcontainer{
+    max-width: 1300px;
+    padding: 60px 30px 30px 30px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+
 }
 
+#grid{
+    justify-content: start;
+}
 
+.grid1{
+    border-bottom: 1px solid black;
+    padding: 0px 25px 25px 0px;
+}
 
+.grid2{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 0px 25px 25px 25px;
+}
+
+.grid3{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 0px 0px 25px 25px;
+}
+
+.grid4{
+    padding: 25px 25px 0px 0px;
+}
+
+.grid5{
+    border-left: 1px solid black;
+    padding: 25px 25px 0px 25px;
+}
+
+.grid6{
+    border-left: 1px solid black;
+    padding: 25px 0px 0px 25px;
+}
+
+.gridheading{
+    overflow: visible;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.gridparagraph{
+    font-size: 16px;
+}
 
 
 @media screen and (max-width: 1500px){
@@ -231,6 +280,48 @@ section{
     }
 }
 
+@media screen and (max-width: 1279px){
+    .gridcontainer{
+        padding-top: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid1{
+        border-bottom: 1px solid black;
+        padding: 0px 25px 25px 0px;
+    }
+    
+    .grid2{
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        padding: 0px 0px 25px 25px;
+    }
+    
+    .grid3{
+        border-left: 1px none black;
+        border-bottom: 1px solid black;
+        padding: 0px 25px 25px 0px;
+    }
+    
+    .grid4{
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        padding: 0px 0px 25px 25px;
+    }
+    
+    .grid5{
+        border-left: 1px none black;
+        border-bottom: 1px none black;
+        padding: 0px 25px 25px 0px;
+    }
+    
+    .grid6{
+        border-bottom: 1px none black;
+        border-left: 1px solid black;
+        padding: 0px 0px 25px 25px;
+    }
+}
+
 @media screen and (max-width: 1250px){
     .photo img{
         height: 200px;
@@ -258,8 +349,12 @@ section{
 }
 
 @media screen and (max-width: 1040px){
-    .photo, .pesonal-statement {
+    .photo, .personal-statement {
        margin: 30px 15px 30px 15px;
+    }
+
+    .gridcontainer{
+        padding: 30px 15px 30px 15px;
     }
     
 }
@@ -282,7 +377,7 @@ section{
         margin: 30px 0px 30px 15px;
     }
 
-    .pesonal-statement {
+    .personal-statement {
         margin: 30px 15px 30px 0px;
         font-size: 15px;
      }
@@ -328,6 +423,18 @@ section{
     .menu li a{
         display: inline block;
     }
+
+    .gridcontainer{
+        padding: 30px 0px 30px 0px;
+    }
+
+    .gridheading{
+        font-size: 16px;
+    }
+    
+    .gridparagraph{
+        font-size: 15px;
+    }
     
 }
 
@@ -344,7 +451,7 @@ section{
         flex-wrap: wrap;
     }
 
-    .pesonal-statement{
+    .personal-statement{
         margin: 20px 0px 0px 0px;
     }
 
@@ -369,6 +476,20 @@ section{
     /* .statementandphoto{
         justify-content: flex-end ;
     } */
+}
+
+
+@media screen and (max-width: 650px){
+    .gridcontainer{
+        padding-top: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .grid1, .grid2, .grid3, .grid4, .grid5, .grid6{
+        border-bottom: 1px solid black;
+        border-left: 1px none black;
+        padding: 15px 0px 15px 0px;
+    }
 }
 
 

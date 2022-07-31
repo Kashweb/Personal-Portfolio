@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+
+// Navbar color change on scrolling
     $(window).scroll(function() {
         if(window.scrollY > 100){
             $(".navbar").addClass("scrolledNavbar");
@@ -16,10 +18,6 @@ $(".menu-bars").click(function(){
     $(".menu-bars i").toggleClass("active");
 });
 
-// $(".menu-bars").toggle(function() {
-//     $(".navbar .menu").addClass("active");
-// }, function() {
-//     $(".navbar .menu").removeClass("active");
-// })
+
 
 });
