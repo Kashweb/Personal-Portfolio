@@ -79,7 +79,7 @@ font-family: 'Ubuntu', sans-serif; */
 
 .home{
     display: flex;
-    background-image: url(/photo.jpeg) no-repeat center;
+    background: url(/photo.jpeg) no-repeat center;
     /* background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") no-repeat center; */
     height: 100vh;
     color: #fff;
@@ -135,16 +135,16 @@ section{
     font-family: 'Superior title', 'Times New Roman', sans-serif;
 }
 
-.about{
+.about, .skills{
     font-family: 'Poppins', sans-serif;
 }
 
-.aboutcontent{
+.aboutcontent, .skillscontent{
     margin: 0px 50px;
     align-items: center;
 }
 
-.statementandphoto{
+.statementandphoto, .logoandskills{
     margin: auto;
     max-width: 1300px;
     display: flex;
@@ -238,6 +238,22 @@ section{
     font-size: 16px;
 }
 
+.skills{
+    background-color: black;
+}
+
+.skills-left-coloum, .skills-right-coloum{
+    margin: 30px;
+    background-color: beige;
+    width: 50%;
+}
+
+
+
+
+
+
+/* Responsive media styles start here */
 
 @media screen and (max-width: 1500px){
     .aboutcontent{
@@ -350,7 +366,7 @@ section{
 }
 
 @media screen and (max-width: 1040px){
-    .photo, .personal-statement {
+    .photo, .personal-statement, .skills-left-coloum {
        margin: 30px 15px 30px 15px;
     }
 
@@ -378,7 +394,7 @@ section{
         margin: 30px 0px 30px 15px;
     }
 
-    .personal-statement {
+    .personal-statement, .skills-left-coloum {
         margin: 30px 15px 30px 0px;
         font-size: 15px;
      }
@@ -452,7 +468,7 @@ section{
         flex-wrap: wrap;
     }
 
-    .personal-statement{
+    .personal-statement, .skills-left-coloum{
         margin: 20px 0px 0px 0px;
     }
 
