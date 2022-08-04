@@ -16,10 +16,17 @@ font-family: 'Ubuntu', sans-serif; */
 }
 
 .navbar{
+    z-index: 200;
     position: fixed;
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
     padding: 25px 0px;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    background: #007bff;
+    padding: 15px 0px;
     transition: all 0.3s ease;
 }
 
@@ -135,6 +142,8 @@ section{
     font-family: 'Superior title', 'Times New Roman', sans-serif;
 }
 
+
+
 .about, .skills{
     font-family: 'Poppins', sans-serif;
 }
@@ -144,12 +153,13 @@ section{
     align-items: center;
 }
 
-.statementandphoto, .logoandskills{
+.statementandphoto{
     margin: auto;
     max-width: 1300px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    
 }
 
 .personal-statement{
@@ -157,6 +167,7 @@ section{
     font-size: 17px;
     font-weight: 400;
     margin: 30px;
+    letter-spacing: 0.8px;
 }
 
 .photo[data-name="firstPhoto"]{
@@ -173,8 +184,8 @@ section{
 
 .photo img{
     margin: 0px;
-    height: 280px;
-    width: 280px;
+    height: 240px;
+    width: 240px;
     object-fit: cover;
     border-radius: 8%;
     border: 4px solid black;
@@ -238,24 +249,66 @@ section{
     font-size: 16px;
 }
 
+
+/* Skills section Skills section  Skills section  Skills section  Skills section   */
+
 .skills{
     background-color: #F0F0F0;
 }
 
-.skills-left-coloum, .skills-right-coloum{
+
+.logoandskills{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.skills-left-coloum{
+    font-size: 15px;
+    margin: 30px;
+    width: 45%;
+}
+
+.skills-left-coloum[data-name="secondiconbox"]{
+    display: none;
+}
+
+.icongrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+
+.icon img{
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    margin: 2px 0px;
+}
+
+.icon p{
+    margin-bottom: 10px;
+}
+
+.skills-right-coloum{
     font-size: 16px;
     margin: 30px;
-    width: 50%;
+    width: 35%;
 }
 
 .midheading{
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 1px;
+    margin-bottom: 35px;
 }
 
 .bar{
-    margin: 18px 0px;
+    margin-bottom: 18px;
 }
 
 .barinfo{
@@ -265,21 +318,20 @@ section{
     margin-bottom: 5px;
 }
 
-.line{
+.bar .line{
     width: 100%;
     height: 5px;
     background-color: cyan;
     position: relative;
 }
 
-.bar ::before{
+.bar .line::before{
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    background-color: #296bab ;
-    position: absolute;
+    background-color: #296bab;
 }
 
 .bar .html::before{
@@ -309,22 +361,49 @@ section{
 /* Responsive media styles start here */
 
 @media screen and (max-width: 1500px){
-    .aboutcontent{
+    .aboutcontent, .skillscontent{
         margin: 0px 0px;
     }
 }
 
 @media screen and (max-width: 1400px){
     .photo img{
-        height: 250px;
-        width: 250px;
+        height: 240px;
+        width: 240px;
 }
+}
+
+
+
+@media screen and (max-width: 1374px){
+    .skills .max-width{
+        padding: 0px 100px;
+    }
+
+    .skills-left-coloum, .skills-right-coloum {
+        margin: 30px 15px 30px 15px;
+     }
+}
+
+@media screen and (max-width: 1314px){
+    .skills-left-coloum{
+        width: 50%;
+    }
+
+    .skills-right-coloum{
+        width: 40%;
+    }
 }
 
 
 /* media screen at 1300 width */ /* media screen at 1300 width */ /* media screen at 1300 width */
 
 @media screen and (max-width: 1300px){
+
+    .skills .max-width{
+        padding: 0px 70px;
+    }
+
     .photo img{
         height: 220px;
         width: 220px;
@@ -399,6 +478,9 @@ section{
 }
 }
 
+
+
+
 @media screen and (max-width: 1220px){
     .photo img{
         height: 180px;
@@ -410,6 +492,46 @@ section{
     }
 }
 
+
+@media screen and (max-width: 1040px){
+    .logoandskills{
+        display: block;
+    }
+
+    .skills-left-coloum[data-name="firsticonbox"]{
+        display: none;
+    }
+
+    .skills-left-coloum[data-name="secondiconbox"]{
+        display: block;
+    }
+
+    .skills-left-coloum{
+        margin: auto;
+        padding: 30px 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .skills-right-coloum .midheading{
+        display: none;
+    }
+
+    .skills-right-coloum{
+        padding: 30px 0px;
+        text-align: center;
+        margin: auto;
+        width: 50%;
+    }
+
+    .icongrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+    }
+}
+
 @media screen and (max-width: 1120px){
     .photo img{
         height: 160px;
@@ -418,8 +540,14 @@ section{
     }
 }
 
+@media screen and (max-width: 1314px){
+    .midheading{
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 1040px){
-    .photo, .personal-statement, .skills-left-coloum {
+    .photo, .personal-statement{
        margin: 30px 15px 30px 15px;
     }
 
@@ -432,10 +560,27 @@ section{
 /* media screen at 1080 width */ /* media screen at 1080 width */ /* media screen at 1080 width */
 
 @media screen and (max-width: 1080px) {
-    .max-width{
+    .max-width, .skills .max-width{
         padding: 0 55px;
     }
 }
+
+/* @media screen and (max-width: 1069px){
+    .skills .max-width{
+        padding: 0px 50px;
+    } */
+
+@media screen and (max-width: 950px){
+    .skills-right-coloum{
+        width: 55%;
+    }
+    .icongrid {
+        gap: 16px;
+    }
+}
+
+
+
 
 /* media screen at 900 width */ /* media screen at 900 width */ /* media screen at 900 width */
 /* Responsive Navbar */
@@ -452,7 +597,7 @@ section{
         font-size: 15px;
      }
 
-    .max-width{
+    .max-width, .skills .max-width{
         padding: 0 25px;
     }
 
@@ -560,7 +705,19 @@ section{
         border-left: 1px none black;
         padding: 15px 0px 15px 0px;
     }
+
+    .skills-right-coloum{
+        width: 70%;
+    }
+
+    .skills-left-coloum{
+        padding: 0px 30px;
+    }
+
+    .icongrid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 
 
 /* media screen at 600 width */ /* media screen at 600 width */ /* media screen at 600 width */
@@ -586,10 +743,41 @@ section{
     }
 }
 
+
+@media screen and (max-width: 545px){
+
+    .skills-right-coloum{
+        width: 80%;
+    }
+
+    .skills-left-coloum{
+        padding: 0px;
+    }
+}
+
 @media screen and (max-width: 500px){
     .photo img{
         height: 130px;
         width: 130px;
+    }
+
+    .skills-right-coloum{
+        width: 90%;
+    }
+
+    .midheading{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 475px){
+
+    .skills-right-coloum{
+        width: 100%;
+    }
+
+    .midheading{
+        font-size: 14px;
     }
 }
 
@@ -601,5 +789,11 @@ section{
 
     .heading{
         font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .icongrid{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
