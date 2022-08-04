@@ -354,6 +354,21 @@ section{
 }
 
 
+/* resume section */
+
+#midresume {
+    background: url(Editedresume.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
 
 
 
@@ -716,6 +731,7 @@ section{
 
     .icongrid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 
