@@ -374,8 +374,8 @@ section{
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
 
 
