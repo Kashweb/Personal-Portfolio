@@ -371,7 +371,8 @@ section{
 .Resumebackground::before {
     content: "";
     position: absolute;
-    background: url(Photos/ResumeBackgroundImage.avif) no-repeat center;;
+    /* background: url(Photos/ResumeBackgroundImage.avif) no-repeat center; */
+    background: url("https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
