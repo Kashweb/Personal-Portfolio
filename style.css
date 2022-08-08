@@ -151,12 +151,12 @@ section{
     font-family: 'Poppins', sans-serif;
 }
 
-.aboutcontent, .skillscontent{
+.aboutcontent, .skillscontent, .skillscontent{
     margin: 0px 50px;
     align-items: center;
 }
 
-.statementandphoto{
+.statementandphoto, .mapandcontact{
     margin: auto;
     max-width: 1300px;
     display: flex;
@@ -265,6 +265,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: 30px;
 }
 
 .skills-left-coloum{
@@ -409,6 +410,7 @@ section{
     transition: all 0.5s;
     border: 2px solid black;
     border-radius: 10px;
+    box-shadow: 0px 15px 30px black;
     position: relative;
 }
 
@@ -446,11 +448,39 @@ section{
 
 
 
+/* contact section contact section contact section contact section contact section  */
 
+.mapBox, .contactform{
+    margin: 30px;
+    width: 40%;
+}
+
+/* .contactform{
+
+} */
+
+
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+  }
+
+#map:hover{
+    box-shadow: 0px 15px 30px #d2bdff;;
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+  
 /* Responsive media styles start here */
 
 @media screen and (max-width: 1500px){
-    .aboutcontent, .skillscontent{
+    .aboutcontent, .skillscontent, .skillscontent{
         margin: 0px 0px;
     }
 }
@@ -636,7 +666,7 @@ section{
 }
 
 @media screen and (max-width: 1040px){
-    .photo, .personal-statement{
+    .photo, .personal-statement, .map, .contactform{
        margin: 30px 15px 30px 15px;
     }
 
@@ -676,12 +706,12 @@ section{
 
 
 @media screen and (max-width: 900px) {
-    .photo{
+    .photo, .contactform{
         align-items: flex-start;
         margin: 30px 0px 30px 15px;
     }
 
-    .personal-statement, .skills-left-coloum {
+    .personal-statement, .skills-left-coloum, .map {
         margin: 30px 15px 30px 0px;
         font-size: 15px;
      }
@@ -755,7 +785,7 @@ section{
         flex-wrap: wrap;
     }
 
-    .personal-statement, .skills-left-coloum{
+    .personal-statement, .skills-left-coloum, .map, .contactform{
         margin: 20px 0px 0px 0px;
     }
 
