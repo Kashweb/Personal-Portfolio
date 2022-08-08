@@ -286,7 +286,29 @@
                     <div id="map"></div>
                 </div>
                 <div class="contactform">
-
+                <h3 class="midheading">SEND ME A MESSAGE</h3>
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <div class="fields">
+                            <div class="firstn">
+                                <input type="text" id="firstname" placeholder="First Name*" required>
+                            </div>
+                            <div class="lastn">
+                                <input type="text" id="lastname" placeholder="Last Name" >
+                            </div>
+                        </div>
+                            <div class="field">
+                                <input type="text" id="Email" placeholder="Email*" required>
+                            </div>
+                            <div class="field">
+                                <input type="text" id="subject" placeholder="Subject*" required>
+                            </div>
+                            <div class="field">
+                                <textarea name="" id="message" cols="30" rows="6" placeholder="Type your message here..."></textarea>
+                            </div>
+                            <div class="formbutton">
+                                <button type="submit"> Submit</button>
+                            </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -306,7 +328,22 @@
 </section> -->
 
     <script src="script.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "kashchawla01@gmail.com",
+    Password : "password",
+    To : 'kashchawla01@gmail.com',
+    From : "document.querySelector("Email").value,",
+    Subject : "New Message From ",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+};
+    </script>
 </body>
 </html>

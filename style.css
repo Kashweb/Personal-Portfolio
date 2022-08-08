@@ -450,6 +450,10 @@ section{
 
 /* contact section contact section contact section contact section contact section  */
 
+.Contact{
+    font-family: 'poppins', sans-serif;
+}
+
 .mapBox, .contactform{
     margin: 30px;
     width: 40%;
@@ -470,6 +474,53 @@ section{
 #map:hover{
     box-shadow: 0px 15px 30px #d2bdff;;
     transition: all 0.5s ease;
+}
+
+
+.contactform form{
+    width: 100%;
+}
+
+form .fields{
+    display: flex;
+    justify-content: space-between;
+}
+.firstn, .lastn{
+    width: 49%;
+    
+}
+
+
+.contactform .field input, .contactform .field textarea, #firstname, #lastname{
+    border: 1px solid black;
+    margin-bottom: 15px;
+    height: 45px;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 3px;
+}
+
+.contactform .field textarea{
+    height: 110px;
+}
+
+.formbutton button{
+    display: inline-block;
+	font-weight: 500;
+	color: #007bff;
+	text-align: center;
+	border: 0.5px solid transparent;
+	padding: 15px 35px;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.formbutton button:hover{
+	padding: 15px 45px;
+    transition: all 0.3s ease;
+    font-size: 20px;
 }
 
 
