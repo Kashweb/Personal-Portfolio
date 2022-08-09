@@ -398,7 +398,7 @@ section{
 }
 
 .button{
-    margin: 20px;
+    margin: 30px;
     font-size: 25px;
     font-weight: 500;
     padding: 20px 40px;
@@ -540,29 +540,78 @@ form .fields{
     background-color: #111;
 }
 
+
+:root{
+    --bg: #dcdde1;     
+--color-icon: #535c68;  
+--social-icon1: #e4405f;
+--social-icon2: #3b5999;
+--social-icon3: #e4405f;
+--social-icon4: #cd201f;
+--social-icon5: #0077B5;  
+
+}
+
+
 .footericonlist{
-    padding: 20px 0px 20px;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .footericonitem{
-    width: 50px;
-    height: 50px;
     list-style: none;
+    padding: 50px;
 }
 
 .footericonlink{
+    width: 30px;
+    height: 30px;
     color: white;
     display: inline-block;
     text-decoration: none;
-    height: 30px;
-    width: 30px;
     margin: auto;
     position: relative;
     transition: all 0.3s ease;
 }
+
+.footericonitem i{
+    margin: auto;
+    font-size: 30px;
+}
+
+.footericonlink:hover{
+
+    background-color: #e4405f;
+    padding: 20px;
+}
+
+/* .footericonlink::before{
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+
+.footericonlink:hover:before{
+    transform: scale(0);
+}
+
+.footericonitem:nth-child(1) a:hover::before{
+    background: var(--color-icon); 
+} */
+
 
   
 /* Responsive media styles start here */
