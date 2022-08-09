@@ -37,3 +37,18 @@ function initMap() {
   
   window.initMap = initMap;
 
+
+
+function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "kashchawla01@gmail.com",
+        Password : "",
+        To : 'kashchawla01@gmail.com',
+        From : document.getElementById("Email").value,
+        Subject : "New Message From Portfolio ",
+        Body : "And this is the body"
+        }).then(
+            message => alert(message)
+            );
+};
