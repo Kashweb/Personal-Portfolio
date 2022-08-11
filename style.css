@@ -731,7 +731,14 @@ form .fields{
     background-color: #0077B5;
   }
 
- 
+.lastbit{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 10px 0px;
+}
 
 
 
