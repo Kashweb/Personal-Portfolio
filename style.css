@@ -548,7 +548,8 @@ section{
 
 .mapandcontact{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-bottom: 4y0px;
 }
 
 .mapBox, .contactform{
@@ -556,9 +557,26 @@ section{
     width: 40%;
 }
 
-/* .contactform{
+.mapBoxtwo{
+    display: none;
+    margin: 30px;
+    width: 40%;
+}
 
-} */
+.phoneicon{
+    position: relative;
+    transform: rotate(-20deg);
+}
+
+
+.phonebox iframe{
+    position: absolute;
+    background-color: rgb(211, 211, 211);
+    top: 55px;
+    left: 132px;
+    width: 248.5px;
+    height: 392px;
+}
 
 
 #map {
@@ -628,7 +646,7 @@ form .fields{
 }
 
 .footericons{
-    padding: 40px 0px 40px;
+    padding: 20px 0px 40px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -641,7 +659,11 @@ form .fields{
     max-width: 1000px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.footericonitem{
+    list-style-type: none;
 }
 
 .footericonlink{
@@ -649,11 +671,15 @@ form .fields{
     margin: auto;
     display: inline-flex;
     font-size: 35px;
-    color: #fff;
+    color: #fff; 
     width: 70px;
     height: 70px;
     transition: .5s linear;
     z-index: 1;
+}
+
+.footericonlink:hover{
+    color: #fff;
 }
 
 .footericonlink i{
