@@ -1,15 +1,25 @@
 
 $(document).ready(function() {
 
-// Navbar color change on scrolling
+// Navbar color change on scrolling and scroll up button
     $(window).scroll(function() {
         if(window.scrollY > 100){
             $(".navbar").addClass("scrolledNavbar");
         }else {
             $(".navbar").removeClass("scrolledNavbar");
         }
+        if(window.scrollY > 800){
+            $(".scrollupbtn").addClass("visible");
+        }else{
+            $(".scrollupbtn").removeClass("visible");
+        }
     });
 
+
+// // scroll up button functionality             I initially used Jquery to make this scroll button work, found a much easy way by simply using HTML href="#home" which takes me back to the top
+// $(".scrollupbtn").click(function(){           I ll leave this code here anyways incase you are checking out my code/ 
+//     $("html").animate({scrollTop: 0})         The reason I did this is because Jquery seemed to be running slow and as programmers we are always taught speed / efficency is everything  
+// });
 
 // Fas Fa Bars toggle
 

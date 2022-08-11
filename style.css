@@ -15,6 +15,93 @@ font-family: 'Ubuntu', sans-serif; */
     background: rgb(210, 246, 6);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+.scrollupbtn{
+    display: none;
+}
+
+.scrollupbtn.visible{
+    display: block;
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    width: 100px;
+    z-index: 101;
+}
+
+
+
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+          -webkit-tap-highlight-color: transparent;
+  }
+  
+  .scrollupbtn button {
+      width: 55px;
+      height: 55px;
+      cursor: pointer;
+      background-color: #5de6de;
+      background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+      border: none;
+      border-radius: 50%;
+      transition: 200ms;
+  }
+  
+  .scrollupbtn button svg {
+      fill: white;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .scrollupbtn button:before {
+      content: 'Back to Top';
+      position: absolute;
+      transform: translateX(-50%) translateY(45px);
+      font-size: 15px;
+      transition: 200ms;
+      color: transparent;
+      font-weight: bold;
+  }
+  
+  .scrollupbtn button:hover {
+      box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+      width: 65px;
+      height: 65px;
+  }
+  
+  .scrollupbtn button:hover::before {
+      color: #007bff;
+  }
+  
+  .scrollupbtn button:hover svg {
+          animation: bounce 2s infinite linear;
+  }
+  
+  @keyframes bounce {
+      0% {transform: translateX(-50%) translateY(-50%)}
+      25% {transform: translateX(-50%) translateY(-65%)}
+      50% {transform: translateX(-50%) translateY(-50%)}
+      75% {transform: translateX(-50%) translateY(-35%)}
+      100% {transform: translateX(-50%) translateY(-50%)}
+  }
+  
+  .scrollupbtn button:focus {
+      outline: none;
+  }
+
+
+
 .navbar{
     z-index: 200;
     position: fixed;
@@ -540,77 +627,86 @@ form .fields{
     background-color: #111;
 }
 
-
-:root{
-    --bg: #dcdde1;     
---color-icon: #535c68;  
---social-icon1: #e4405f;
---social-icon2: #3b5999;
---social-icon3: #e4405f;
---social-icon4: #cd201f;
---social-icon5: #0077B5;  
-
+.footericons{
+    padding: 40px 0px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .footericonlist{
-    padding: 5px;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.footericonitem{
-    list-style: none;
-    padding: 50px;
+    justify-content: space-between;
 }
 
 .footericonlink{
-    width: 30px;
-    height: 30px;
-    color: white;
-    display: inline-block;
-    text-decoration: none;
-    margin: auto;
     position: relative;
-    transition: all 0.3s ease;
-}
-
-.footericonitem i{
     margin: auto;
-    font-size: 30px;
-}
-
-.footericonlink:hover{
-
-    background-color: #e4405f;
-    padding: 20px;
-}
-
-/* .footericonlink::before{
-    content: " ";
-    position: absolute;
+    display: inline-flex;
+    font-size: 35px;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    transition: .5s linear;
     z-index: 1;
+}
+
+.footericonlink i{
+    margin: auto;
+}
+
+.footericonlink::before{
+    content: "";
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 30px;
-    height: 30px;
-    color: white;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
+    z-index: -1;
     transform: scale(0);
     transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
 }
 
-.footericonlink:hover:before{
-    transform: scale(0);
-}
+.footericonlink:hover::before {  
+    transform: scale(1);
+  }
 
-.footericonitem:nth-child(1) a:hover::before{
-    background: var(--color-icon); 
-} */
+  .footericonitem:nth-child(1) a:hover::before{
+    background-color: #e4405f;
+  }
+
+  .footericonitem:nth-child(2) a:hover::before{
+    background-color: #3b5999;
+  }
+
+  .footericonitem:nth-child(3) a:hover::before{
+    background-color: #4FCE5D;
+  }
+
+  .footericonitem:nth-child(4) a:hover::before{
+    background-color: #cd201f;
+  }
+
+  .footericonitem:nth-child(5) a:hover::before{
+    background-color: #9cdaf1;
+  }
+
+  /* #333333 */
+
+  .footericonitem:nth-child(6) a:hover::before{
+    background-color: #0077B5;
+  }
+
+ 
+
 
 
   
