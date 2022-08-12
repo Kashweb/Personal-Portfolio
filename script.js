@@ -28,6 +28,11 @@ $(".menu-bars").click(function(){
     $(".menu-bars i").toggleClass("active");
 });
 
+$(".menu-btn").click(function(){
+    $(".menu").toggleClass("active");
+    $(".menu-bars i").toggleClass("active");
+});
+
 
 
 });

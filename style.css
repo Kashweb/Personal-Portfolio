@@ -34,7 +34,6 @@ html{
 }
 
 
-
 .noselect {
     -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -99,6 +98,13 @@ html{
   .scrollupbtn button:focus {
       outline: none;
   }
+
+  .menu-bars{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
 
 
 
@@ -206,18 +212,13 @@ html{
     font-weight: 600;
 }
 
-.menu-bars{
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-}
+
 
 
 /* about section */ /* about section */ /* about section */ /* about section */
 
 section{
-    padding: 50px 0px 40px;
+    padding: 60px 0px 40px;
 }
 
 #skills{
@@ -549,7 +550,7 @@ section{
 .mapandcontact{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 4y0px;
+    padding-bottom: 40px;
 }
 
 .mapBox, .contactform{
@@ -754,7 +755,14 @@ form .fields{
     .aboutcontent, .skillscontent, .skillscontent{
         margin: 0px 0px;
     }
+
+    .scrollupbtn.visible{
+        bottom: 80px;
+        right: 0px;
+    }
 }
+
+
 
 @media screen and (max-width: 1400px){
     .photo img{
@@ -817,6 +825,16 @@ form .fields{
         padding-bottom: 7px;
         font-weight: 500;
     }
+
+    .scrollupbtn.visible{
+        bottom: 80px;
+        right: 0px;
+        width: 70px;
+    }
+
+    .Contact .max-width{
+        padding: 0px 50px;
+    }
 }
 
 @media screen and (max-width: 1279px){
@@ -865,7 +883,12 @@ form .fields{
     .photo img{
         height: 200px;
         width: 200px;
-}
+    }
+
+    .Contact .max-width{
+        padding: 0px 25px;
+    }
+
 }
 
 
@@ -928,6 +951,12 @@ form .fields{
         width: 160px;
         border-radius: 15%;
     }
+
+
+    .mapBox, .contactform{
+        margin: 15px 0px 0px 0px;
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 1314px){
@@ -937,7 +966,7 @@ form .fields{
 }
 
 @media screen and (max-width: 1040px){
-    .photo, .personal-statement, .map, .contactform{
+    .photo, .personal-statement, .map{
        margin: 30px 15px 30px 15px;
     }
 
@@ -953,7 +982,36 @@ form .fields{
     .max-width, .skills .max-width{
         padding: 0 55px;
     }
+
+    .mapBox{
+        position: relative;
+        left: -40px;
+    }
 }
+
+
+@media screen and (max-width: 1000px) {
+    /* .mapandcontact{
+        display: block;
+        margin: auto;
+    } */
+
+    .mapBox{
+        display: none;
+        position: relative;
+        left: -60px;
+    }
+
+    .phoneicon{
+        transform: rotate(0deg);
+    }
+
+    .mapBoxtwo{
+        margin: 15px 0px 0px 0px;
+        display: block;
+    }
+}
+
 
 /* @media screen and (max-width: 1069px){
     .skills .max-width{
@@ -977,7 +1035,7 @@ form .fields{
 
 
 @media screen and (max-width: 900px) {
-    .photo, .contactform{
+    .photo{
         align-items: flex-start;
         margin: 30px 0px 30px 15px;
     }
@@ -1040,6 +1098,22 @@ form .fields{
     .gridparagraph{
         font-size: 15px;
     }
+
+    .mapandcontact{
+        display: block;
+        margin: auto;
+    }
+
+    .mapBoxtwo, .contactform{
+        padding: 30px 0px 30px;
+        margin: auto;
+        text-align: center;
+        width: 60%;
+    }
+
+    .mapBoxtwo{
+        width: 80%;
+    }
     
 }
 
@@ -1047,6 +1121,14 @@ form .fields{
     .photo img{
         height: 150px;
         width: 150px;
+    }
+
+    .mapBoxtwo, .contactform{
+        width: 70%;
+    }
+
+    .mapBoxtwo{
+        width: 90%;
     }
 }
 
@@ -1056,7 +1138,7 @@ form .fields{
         flex-wrap: wrap;
     }
 
-    .personal-statement, .skills-left-coloum, .map, .contactform{
+    .personal-statement, .skills-left-coloum, .map{
         margin: 20px 0px 0px 0px;
     }
 
@@ -1107,6 +1189,14 @@ form .fields{
     .icongrid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    .mapBoxtwo, .contactform{
+        width: 80%;
+    }
+
+    .mapBoxtwo{
+        width: 100%;
+    }
 }
 
 
@@ -1144,6 +1234,24 @@ form .fields{
     .skills-left-coloum{
         padding: 0px;
     }
+
+
+    .scrollupbtn button {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .scrollupbtn button svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    
+    .scrollupbtn button:hover {
+        width: 55px;
+        height: 55px;
+    }
+
 }
 
 @media screen and (max-width: 500px){
@@ -1159,7 +1267,21 @@ form .fields{
     .midheading{
         font-size: 16px;
     }
+
+    
+    .mapBoxtwo, .contactform{
+        width: 100%;
+    }
+
+    .mapBoxtwo{
+        width: 100%;
+    }
+
+    .scrollupbtn.visible{
+        right: -10px;
+    }
 }
+
 
 @media screen and (max-width: 475px){
 
@@ -1170,7 +1292,28 @@ form .fields{
     .midheading{
         font-size: 14px;
     }
+
+    .home .max-width{
+        margin: auto 0 auto 0px;
+    }
+
 }
+
+@media screen and (max-width: 425px){
+    .footericonlink{
+        width: 60px;
+        height: 60px;
+    }
+    
+    
+    .footericonlink::before{
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+
 
 @media screen and (max-width: 425px){
     .photo img{
@@ -1183,8 +1326,37 @@ form .fields{
     }
 }
 
+
+@media screen and (max-width: 390px){
+    .homecontent .text1{
+        font-size: 19px;
+        padding-bottom: 6px;
+        font-weight: 500; 
+    }
+    
+    .homecontent .text3{
+        font-size: 19px;
+        padding-bottom: 6px;
+        font-weight: 500;
+    }
+}
+
 @media screen and (max-width: 380px){
     .icongrid{
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+@media screen and (max-width: 370px){
+    .footericonlink{
+        width: 50px;
+        height: 50px;
+    }
+    
+    
+    .footericonlink::before{
+        width: 50px;
+        height: 50px;
+    }
+
 }
