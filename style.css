@@ -43,6 +43,7 @@ html{
               user-select: none;
           -webkit-tap-highlight-color: transparent;
   }
+
   
   .scrollupbtn button {
       width: 55px;
@@ -450,7 +451,7 @@ section{
 
 .Resumebackground{
     position: relative; 
-    height: 30vh;
+    height: 280px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -532,11 +533,83 @@ section{
 /* projects section projects section projects section projects section projects section projects section */
 
 .projects{
-    background-color: #111;
-    /* background-color: #000000; */
+    font-family: 'poppins', sans-serif;
+}
+
+.projectscontent{
+    padding: 60px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.projects-wrapper{
+    margin-bottom: 30px;
+}
+
+.project-item{
+    border-radius: 15px;
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.762);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.zoom{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    transition: all 0.3s ease;
+}
+
+.zoom i{
+    font-size: 25px;
     color: #fff;
 }
 
+
+.project-item img{
+    width: 100%; 
+    height: 100%;
+}
+
+.project-info{
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    color: #fff;
+    background-color: darkblue;
+    transition: all 0.3s ease;
+}
+
+.project-info h3{
+    margin-bottom: 0px;
+}
+
+.project-item:hover .project-info {
+    bottom: 0px;
+}
+
+.project-item:hover .zoom{
+    top: 130px;
+}
+
+.project-item:hover .project-overlay{
+    opacity: 1;
+}
 
 
 
