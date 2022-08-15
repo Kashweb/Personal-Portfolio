@@ -30,7 +30,7 @@ html{
     bottom: 80px;
     right: 40px;
     width: 100px;
-    z-index: 101;
+    z-index: 10;
 }
 
 
@@ -608,6 +608,7 @@ section{
     bottom: 0px;
 }
 
+
 .project-item:hover .zoom{
     top: 130px;
 }
@@ -615,6 +616,17 @@ section{
 .project-item:hover .project-overlay{
     opacity: 1;
 }
+
+/* .modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: yellow;
+    width: 500px;
+} */
 
 
 
@@ -838,6 +850,18 @@ form .fields{
   
 /* Responsive media styles start here */
 
+@media screen and (max-width: 1650px){
+    .projects .max-width{
+        padding: 0px 50px;
+    }
+}
+
+@media screen and (max-width: 1650px){
+    .project-item{
+        height: 250px;
+    }
+}
+
 @media screen and (max-width: 1500px){
     .aboutcontent, .skillscontent, .skillscontent{
         margin: 0px 0px;
@@ -877,6 +901,18 @@ form .fields{
 
     .skills-right-coloum{
         width: 40%;
+    }
+
+    .projects .max-width{
+        padding: 0px 100px;
+    }
+
+    .project-item{
+        height: 300px;
+    }
+
+    .projectscontent{
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -990,6 +1026,10 @@ form .fields{
     .statementandphoto{
         align-items: flex-start;
     }
+
+    .projects .max-width{
+        padding: 0px 50px;
+    }
 }
 
 
@@ -1097,6 +1137,10 @@ form .fields{
         margin: 15px 0px 0px 0px;
         display: block;
     }
+
+    .project-item{
+        height: 250px;
+    }
 }
 
 
@@ -1132,7 +1176,7 @@ form .fields{
         font-size: 15px;
      }
 
-    .max-width, .skills .max-width{
+    .max-width, .skills .max-width, .projects .max-width{
         padding: 0 25px;
     }
 
@@ -1202,10 +1246,15 @@ form .fields{
     .mapBoxtwo{
         width: 80%;
     }
+
+    .project-item{
+        height: 220px;
+    }
     
 }
 
 @media screen and (max-width: 750px){
+
     .photo img{
         height: 150px;
         width: 150px;
@@ -1217,6 +1266,10 @@ form .fields{
 
     .mapBoxtwo{
         width: 90%;
+    }
+
+    .project-item{
+        height: 200px;
     }
 }
 
@@ -1246,6 +1299,18 @@ form .fields{
 
     .photo[data-name="firstPhoto"]{
         display: flex;
+    }
+    .projectscontent{
+        grid-template-columns: 1fr;
+    }
+
+    .project-item{
+        margin: 0px 50px;
+        height: 300px;
+    }
+
+    .projects-wrapper {
+        margin-bottom: 0px;
     }
 
     /* .statementandphoto{
@@ -1289,6 +1354,11 @@ form .fields{
     .mapBoxtwo{
         width: 100%;
     }
+
+    .project-item{
+        margin: 0px 20px;
+        height: 250px;
+    }
 }
 
 
@@ -1314,6 +1384,8 @@ form .fields{
         padding-bottom: 6px;
         font-weight: 500;
     }
+
+
 }
 
 
@@ -1342,6 +1414,11 @@ form .fields{
     .scrollupbtn button:hover {
         width: 55px;
         height: 55px;
+    }
+
+    .project-item{
+        margin: 0px 0px;
+        height: 250px;
     }
 
 }
@@ -1391,16 +1468,16 @@ form .fields{
 
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 525px){
     .footericonlink{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
     
     
     .footericonlink::before{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
 }
@@ -1416,6 +1493,11 @@ form .fields{
     .heading{
         font-size: 25px;
     }
+
+    .project-item{
+        margin: 0px 0px;
+        height: 220px;
+    }
 }
 
 
@@ -1430,6 +1512,11 @@ form .fields{
         font-size: 19px;
         padding-bottom: 6px;
         font-weight: 500;
+    }
+
+    .project-item{
+        margin: 0px 0px;
+        height: 200px;
     }
 }
 
