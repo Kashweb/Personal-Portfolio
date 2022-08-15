@@ -341,6 +341,11 @@ section{
     font-size: 16px;
 }
 
+.gridparagraph a{
+    color: black;
+    text-decoration: underline;
+}
+
 
 /* Skills section Skills section  Skills section  Skills section  Skills section   */
 
@@ -758,6 +763,10 @@ form .fields{
     color: #fff;
 }
 
+#phone{
+    transform: rotate(100deg);
+}
+
 .footericonlink i{
     margin: auto;
 }
@@ -782,28 +791,33 @@ form .fields{
   }
 
   .footericonitem:nth-child(1) a:hover::before{
+    background-color: rgb(37, 206, 37);
+  }
+
+
+  .footericonitem:nth-child(2) a:hover::before{
     background-color: #e4405f;
   }
 
-  .footericonitem:nth-child(2) a:hover::before{
+  .footericonitem:nth-child(3) a:hover::before{
     background-color: #3b5999;
   }
 
-  .footericonitem:nth-child(3) a:hover::before{
+  .footericonitem:nth-child(4) a:hover::before{
     background-color: #4FCE5D;
   }
 
-  .footericonitem:nth-child(4) a:hover::before{
+  .footericonitem:nth-child(5) a:hover::before{
     background-color: #cd201f;
   }
 
-  .footericonitem:nth-child(5) a:hover::before{
+  .footericonitem:nth-child(6) a:hover::before{
     background-color: #9cdaf1;
   }
 
   /* #333333 */
 
-  .footericonitem:nth-child(6) a:hover::before{
+  .footericonitem:nth-child(7) a:hover::before{
     background-color: #0077B5;
   }
 
@@ -1172,6 +1186,7 @@ form .fields{
         font-size: 15px;
     }
 
+
     .mapandcontact{
         display: block;
         margin: auto;
@@ -1249,6 +1264,10 @@ form .fields{
         border-bottom: 1px solid black;
         border-left: 1px none black;
         padding: 15px 0px 15px 0px;
+    }
+
+    .grid6{
+        border-bottom: 1px none black;
     }
 
     .skills-right-coloum{
