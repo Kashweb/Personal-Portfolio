@@ -21,6 +21,17 @@ $(document).ready(function() {
 //     $("html").animate({scrollTop: 0})         The reason I did this is because Jquery seemed to be running slow and as programmers we are always taught speed / efficency is everything  
 // });
 
+
+// $(".project-item").click(function(){
+//     alert("hello");
+// });
+
+// $(".project-item").click(function(){
+//     $(".modal").style.display = "block";
+// });
+
+
+
 // Fas Fa Bars toggle
 
 $(".menu-bars").click(function(){
@@ -37,9 +48,7 @@ $(".menu-btn").click(function(){
 
 });
 
--12.446872261024101, 130.83924018435545
--12.455246192756226, 130.84019531546517
--12.455004230327784, 130.8421776692171
+
 
 // Initialize and add the map
 function initMap() {

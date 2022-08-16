@@ -20,6 +20,8 @@ html{
 }
 
 
+
+
 .scrollupbtn{
     display: none;
 }
@@ -546,6 +548,7 @@ section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    font-size: 17px;
 }
 
 .projects-wrapper{
@@ -600,7 +603,7 @@ section{
     transition: all 0.3s ease;
 }
 
-.project-info h3{
+.project-info h3, .modal-head h3{
     margin-bottom: 0px;
 }
 
@@ -617,16 +620,107 @@ section{
     opacity: 1;
 }
 
-/* .modal{
+
+
+.modal{
+    display: none;
+    z-index: 50;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 50;
-    background-color: yellow;
-    width: 500px;
-} */
+}
+
+
+.modalback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.5);
+}
+
+.modal-box{
+    position: relative;
+    top: 100px;
+    margin: auto;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    width: 550px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid whitesmoke;
+    overflow: scroll;
+}
+
+/* .modal-box::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-box{
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+  } */
+
+.modal-head, .modal-footer{
+    background-color: #F0F0F0;
+    width: 100%;
+    text-align: end;
+    padding: 30px 0px;
+}
+
+.modal-head h3{
+    text-align: center;
+}
+
+.modal-head button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: end;
+    font-size: 40px;
+    font-weight: 600;
+    border: none;
+    border-radius: 100%;
+    color: darkgray;
+}
+
+.modal-head button:hover{
+    color: black;
+}
+
+.modal-head{
+    border-bottom: 1px solid #ece0e0;
+}
+
+.modal-body{
+    padding: 0px 5px 30px;
+    text-align: center;
+}
+
+.modal-body img{
+    width: 100%;
+    height: 300px;
+    padding-bottom: 30px;
+}
+
+.modal-body .paragraph{
+    box-sizing: border-box;
+    padding : 20px;
+    text-align: center;
+}
+
+
+.modal-body a{
+    color: #fff;
+    padding: 15px 50px;
+}
+
+
+
 
 
 
@@ -712,21 +806,24 @@ form .fields{
     height: 110px;
 }
 
-.formbutton button{
+.formbutton button, .modal-body a{
     display: inline-block;
     font-size: 18px;
 	font-weight: 500;
 	color: #007bff;
 	text-align: center;
 	border: 1px solid transparent;
-	padding: 15px 35px;
 	border-radius: 5px;
 	color: #fff;
 	background-color: #007bff;
     transition: all 0.3s ease;
 }
 
-.formbutton button:hover{
+.formbutton button{
+    padding: 15px 35px;
+}
+
+.formbutton button:hover, .modal-body a:hover{
     transition: all 0.3s ease;
     background-color: darkblue;
 
@@ -775,9 +872,6 @@ form .fields{
     color: #fff;
 }
 
-#phone{
-    transform: rotate(100deg);
-}
 
 .footericonlink i{
     margin: auto;
@@ -1229,6 +1323,8 @@ form .fields{
     .gridparagraph{
         font-size: 15px;
     }
+
+
 
 
     .mapandcontact{
