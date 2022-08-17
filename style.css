@@ -189,8 +189,12 @@ html{
     color: #fff;
     min-height: 500px;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
 }
 
 .home .max-width{
