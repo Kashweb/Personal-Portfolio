@@ -16,6 +16,39 @@ $(document).ready(function() {
     });
 
 
+
+var button = document.querySelectorAll(".project-item");
+
+var modals = document.querySelectorAll(".modal");
+
+var closebutton = document.querySelectorAll(".modal-head button");
+
+var modalback = document.querySelectorAll(".modalback");
+
+var body = document.querySelectorAll("body");
+
+
+button.forEach(function(btn){
+    btn.onclick = function(){
+        var modal = btn.getAttribute("href");
+
+        document.getElementById(modal).style.display = "block";
+    };
+});
+
+closebutton.forEach(function(btn){
+    btn.onclick = function(){
+        var modal = (btn.closest(".modal").style.display = "none");
+    };
+});
+
+modalback.forEach(function(btn){
+    btn.onclick = function(){
+        var modal = (btn.closest(".modal").style.display = "none");
+    };
+});
+
+
 // // scroll up button functionality             I initially used Jquery to make this scroll button work, found a much easy way by simply using HTML href="#home" which takes me back to the top
 // $(".scrollupbtn").click(function(){           I ll leave this code here anyways incase you are checking out my code/ 
 //     $("html").animate({scrollTop: 0})         The reason I did this is because Jquery seemed to be running slow and as programmers we are always taught speed / efficency is everything  
@@ -29,6 +62,36 @@ $(document).ready(function() {
 // $(".project-item").click(function(){
 //     $(".modal").style.display = "block";
 // });
+
+
+
+// $(".project-item").click(function(){
+//     $(".modal").addClass("visible-modal");
+// });
+
+// $(".modal-head button").click(function(){
+//     $(".modal").removeClass("visible-modal");
+// });
+
+// $(".modalback").click(function(){
+//     $(".modal").removeClass("visible-modal");
+// });
+
+
+
+
+
+
+
+
+// for (var i = 0; i < button.length; i++){
+//     button[i].onclick = function(e){
+//         e.preventDefault();
+//         modal = document.getElementById(e.target.getAttribute("href"));
+//         modal.style.display = "block";
+//     }
+// };
+
 
 
 

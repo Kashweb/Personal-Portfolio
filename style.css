@@ -22,6 +22,8 @@ html{
 
 
 
+
+
 .scrollupbtn{
     display: none;
 }
@@ -630,7 +632,20 @@ section{
     bottom: 0;
     left: 0;
     right: 0;
+    animation: visible-modal .5s;
 }
+
+@keyframes visible-modal {
+
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
 
 
 .modalback{
@@ -640,7 +655,7 @@ section{
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(17, 17, 17, 0.5);
+    background-color: rgba(17, 17, 17, 0.8);
 }
 
 .modal-box{
@@ -649,23 +664,35 @@ section{
     margin: auto;
     transform: translate(0, 0);
     -webkit-transform: translate(0, 0);
-    width: 550px;
+    max-width: 550px;
     border-radius: 8px;
     background-color: #fff;
     border: 1px solid whitesmoke;
     overflow: scroll;
+    animation: visible-box .5s;
 }
 
-/* .modal-box::-webkit-scrollbar {
+@keyframes visible-box {
+
+    from{
+        top: -500px;
+    }
+    to{
+        top: 100px;
+    }
+    
+}
+
+.modal-box::-webkit-scrollbar {
     display: none;
 }
 
 .modal-box{
     -ms-overflow-style: none;  
     scrollbar-width: none;
-  } */
+  }
 
-.modal-head, .modal-footer{
+.modal-head{
     background-color: #F0F0F0;
     width: 100%;
     text-align: end;
@@ -1346,6 +1373,10 @@ form .fields{
     .project-item{
         height: 220px;
     }
+
+    .project-item:hover .zoom{
+        top: 100px;
+    }
     
 }
 
@@ -1408,6 +1439,12 @@ form .fields{
     .projects-wrapper {
         margin-bottom: 0px;
     }
+
+    .modal-head{
+        padding: 20px 0px;
+    }
+
+
 
     /* .statementandphoto{
         justify-content: flex-end ;
@@ -1481,6 +1518,14 @@ form .fields{
         font-weight: 500;
     }
 
+    .modal-box{
+        max-width: 450px;
+    }
+
+    .modal-body img{
+        height: 250px;
+    }
+
 
 }
 
@@ -1515,6 +1560,10 @@ form .fields{
     .project-item{
         margin: 0px 0px;
         height: 250px;
+    }
+
+    .project-item:hover .zoom{
+        top: 70px;
     }
 
 }
@@ -1576,8 +1625,29 @@ form .fields{
         height: 50px;
     }
 
+    .modal-box{
+        max-width: 450px;
+    }
+
+    .modal-body img{
+        height: 250px;
+    }
+
 }
 
+@media screen and (max-width: 480px){
+    .modal-box{
+        max-width: 380px;
+    }
+
+    .modal-body img{
+        height: 230px;
+    }
+
+    .modal-body .paragraph{
+        padding: 0px 0px 20px;
+    }
+}
 
 
 @media screen and (max-width: 425px){
@@ -1593,6 +1663,20 @@ form .fields{
     .project-item{
         margin: 0px 0px;
         height: 220px;
+    }
+
+    .modal-box{
+        max-width: 360px;
+    }
+
+    .modal-body img{
+        height: 200px;
+        padding-bottom: 15px;
+    }
+
+    .modal-body .paragraph{
+        padding: 0px 0px 20px;
+        font-size: 15px;
     }
 }
 
