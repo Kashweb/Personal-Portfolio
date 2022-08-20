@@ -114,15 +114,15 @@ $(".menu-btn").click(function(){
 
 
 // Initialize and add the map
-function initMap() {
-    const whereILive = { lat: -12.455004230327784, lng: 130.8421776692171 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15,
-      center: whereILive,
-    });
-  }
+// function initMap() {
+//     const whereILive = { lat: -12.455004230327784, lng: 130.8421776692171 };
+//     const map = new google.maps.Map(document.getElementById("map"), {
+//       zoom: 15,
+//       center: whereILive,
+//     });
+//   }
   
-  window.initMap = initMap;
+//   window.initMap = initMap;
 
 
 
