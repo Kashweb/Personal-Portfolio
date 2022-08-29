@@ -197,6 +197,7 @@ html{
     overflow: hidden;
 }
 
+
 .home .max-width{
     margin: auto 0 auto 20px;
 }
@@ -1600,6 +1601,19 @@ form .fields{
 
     .scrollupbtn.visible{
         right: -10px;
+    }
+
+    .home{
+        display: flex;
+        background: url("Photos/HomebackgroundSmall.jpg") no-repeat center;
+        height: 100vh;
+        min-height: 500px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        overflow: hidden;
     }
 }
 
