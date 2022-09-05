@@ -192,7 +192,6 @@ html{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
     overflow: hidden;
 }
@@ -454,7 +453,7 @@ section{
     width: 60%;
 }
 .bar .node::before{
-    width: 50%;
+    width: 70%;
 }
 .bar .sql::before{
     width: 70%;
@@ -1385,6 +1384,12 @@ form .fields{
     .project-item:hover .zoom{
         top: 100px;
     }
+
+    .Resumebackground::before {
+        background-attachment: local;
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+    }
     
 }
 
@@ -1601,19 +1606,6 @@ form .fields{
 
     .scrollupbtn.visible{
         right: -10px;
-    }
-
-    .home{
-        display: flex;
-        background: url("Photos/HomebackgroundSmall.jpg") no-repeat center;
-        height: 100vh;
-        min-height: 500px;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-attachment: fixed;
-        overflow: hidden;
     }
 }
 
